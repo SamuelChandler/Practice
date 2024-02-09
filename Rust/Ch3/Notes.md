@@ -80,3 +80,10 @@ An `if` expression allows you to branch your code depending on conditions. You p
 
 ### Loop
 The `loop` keyword tells Rust to execute a block of code over and over again forever or until you explicitly tell it to stop.
+- You might also need to pass the result of that operation out of the `loop` to the rest of your code. To do this, you can add the value you want returned after the `break` expression you use to stop the loop; that value will be returned out of the loop so you can use it
+- If you have loops within loops, `break` and `continue` apply to the innermost loop at that point. You can optionally specify a loop label on a loop that you can then use with `break` or `continue` to specify that those keywords apply to the labeled loop instead of the innermost loop. Loop labels must begin with a single quote.
+
+### While Loop 
+A program will often need to evaluate a condition within a loop. While the condition is `true`, the loop runs. When the condition ceases to be true, the program calls `break`, stopping the loop.
+
+- As a more concise alternative, you can use a `for` loop and execute some code for each item in a collection.

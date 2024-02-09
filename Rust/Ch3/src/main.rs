@@ -24,7 +24,7 @@ fn main() {
     // tuple example
     let tup: (i32,f64,u8) = (500,0.4,1);
 
-    let (a, b, c) = tup;
+    let (_a, b, c) = tup;
 
     let d = tup.0;
 
@@ -56,10 +56,59 @@ fn main() {
     }
 
     // if statement with let
-    let val = if val == 3 {"3"} else {"not 3"}; //both results must have the same type 
+    let _val = if val == 3 {"3"} else {"not 3"}; //both results must have the same type 
 
     //loop example
-    
+    let mut  counter = 0;
+
+    let result = loop {
+        counter += 1;
+
+        if counter == 10 {
+            break counter * 2;
+        }
+    };
+
+    println!("The result is {result}");
+
+    let mut count =0;
+
+    'counting_up: loop {
+        println!("count = {count}");
+        let mut remaining = 10;
+
+        loop {
+            println!("remaining = {remaining}");
+            if remaining == 9 {
+                break;
+            }
+            if count == 2 {
+                break 'counting_up;
+            }
+            remaining -= 1;
+        }
+
+        count += 1;
+    }
+    println!("End count = {count}");
+
+    //while loop example
+    let mut number = 3;
+
+    while number != 0 {
+        println!("{number}!");
+
+        number -= 1;
+    }
+
+    println!("LIFTOFF!!!");
+
+    //for loop 
+    let a = [10, 20, 30, 40, 50];
+
+    for element in a {
+        println!("the value is: {element}");
+    }
 
 
     
