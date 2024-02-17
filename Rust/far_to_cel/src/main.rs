@@ -3,7 +3,7 @@ use std::io::{self, Write};
 fn main() {
 
     println!("Welcome to Farenhiet to Celsius Converter");
-    println!("Enter Temperature in Farehiet: ");
+    print!("Enter Temperature in Farehiet: ");
     let _ = io::stdout().flush(); //used to force previos print statment out 
 
     let mut user = String::new();
